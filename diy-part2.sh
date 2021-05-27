@@ -13,7 +13,7 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 # 替换默认IP
-sed -i 's/192.168.0.1/192.168.0.2/g' package/base-files/files/bin/config_generate
+sed -i '#192.168.1.1#192.168.1.99#g' package/base-files/files/bin/config_generate
 
 # cpufreq
 sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
